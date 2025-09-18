@@ -12,6 +12,17 @@ services:
       - app-network
     volumes:
       - postgres_data:/var/lib/postgresql/data
+  
+  nestjs:
+    build:
+      dockerfile: Dockerfile
+    container_name: api-nestjs
+    depends_on:
+      - postgres
+    ports:
+      - "3005:3005"
+    networks:
+      - app-network
 
 volumes:
   postgres_data:
