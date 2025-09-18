@@ -1,7 +1,6 @@
 # AvaliaçãoDevOps03
 
-Thiago Borges Silveira
-Lucas Lopes Marcello
+Thiago Borges Silveira / Lucas Lopes Marcello
 
 ---
 
@@ -17,7 +16,7 @@ Lucas Lopes Marcello
 ## Como executar via Compose
 
 Na raíz do projeto, execute o comando:
-docker compose up --build
+docker compose -f deploy/docker-compose.yml up --build -d
 
 ---
 
@@ -34,7 +33,7 @@ Texto de respostas
 ## Instruções para derrubar
 
 Para derrubar os recursos, na raíz do projeto, execute o comando:
-docker compose down
+docker compose -f deploy/docker-compose.yml down
 
 Se necessário limpar os volumes e redes, na raíz do projeto, execute o comando:
-docker compose down -v
+docker compose -f deploy/docker-compose.yml down -v
